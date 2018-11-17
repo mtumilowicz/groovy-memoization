@@ -8,11 +8,12 @@ computer programs by storing the results of expensive
 function calls and returning the cached result when 
 the same inputs occur again.
 
-We could memoize closure and method:
-* closure - invoking `memoize()` on closure
+# groovy memoization
+We could memoize a closure and a method:
+* closure - invoke `memoize()` on the closure
     ```
     def closure = {
-        counter++
+        ...
     }.memoize()    
     ```
     other `memoize` methods:
@@ -22,12 +23,11 @@ We could memoize closure and method:
     caches at least n values
     * `memoizeBetween` - will generate a new closure which 
     caches at least n values and at most n values
-* method - annotating with `@Memoized`
+* method - annotate with `@Memoized`
     ```
     @Memoized
-    static int extractIdMemo(Person person) {
-        person.counter++
-        return person.id
+    static int method(...) {
+        ...
     }    
     ```
     parameters:
@@ -75,6 +75,13 @@ We provide example for:
         int id
         int counter
     }
+    ```
+    ```
+    @Memoized
+    static int extractIdMemo(Person person) {
+        person.counter++
+        return person.id
+    }    
     ```
     ```
     def "extractIdMemo"() {
