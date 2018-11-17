@@ -31,13 +31,12 @@ We could memoize closure and method:
     }    
     ```
     parameters:
-    > Number of cached return values to protect from garbage collection.
+    * `int protectedCacheSize() default 0;` - Number of cached 
+    return values to protect from garbage collection.
+    * `int maxCacheSize() default 0;` - The maximum size the cache 
+    can grow to.
     
-    `int protectedCacheSize() default 0;`
-    
-    > The maximum size the cache can grow to.
-    
-    `int maxCacheSize() default 0;`
+**We should use memoization only for pure functions.**
 
 # project description
 We provide example for:
