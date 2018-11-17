@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/mtumilowicz/groovy-memoization.svg?branch=master)](https://travis-ci.com/mtumilowicz/groovy-memoization)
+
 # groovy-memoization
 Overview of groovy memoization mechanism.
 
