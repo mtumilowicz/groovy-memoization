@@ -38,6 +38,14 @@ We could memoize closure and method:
     
 **We should use memoization only for pure functions.**
 
+Good example of where memoization could be applied is fibonacci 
+sequence:
+```
+f(n) = f(n-1) + f(n-2)
+f(n-1) = f(n-2) + f(n-3)
+```
+so `f(n-2)` should be memoized
+
 # project description
 We provide example for:
 * closure memoization (`ClosureTest`)
